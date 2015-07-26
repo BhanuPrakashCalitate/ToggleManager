@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [regression]">
+  <test name="Users(failed)">
+    <classes>
+      <class name="com.suite.regression.UserGroup">
+        <methods>
+          <include name="login"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.suite.regression.UserGroup -->
+      <class name="com.suite.regression.Users">
+        <methods>
+          <include name="validateFormFields"/>
+          <include name="cancelCreatingUser"/>
+          <include name="createUser"/>
+          <include name="deleteUser"/>
+          <include name="deleteAllUsers"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.suite.regression.Users -->
+    </classes>
+  </test> <!-- Users(failed) -->
+  <test name="Usergroup(failed)">
+    <classes>
+      <class name="com.suite.regression.UserGroup">
+        <methods>
+          <include name="addCustomUser"/>
+          <include name="login"/>
+          <include name="cancelCreatingUserGroup"/>
+          <include name="validateFormField"/>
+          <include name="addDefaultUser"/>
+          <include name="deleteAllUserGroup"/>
+          <include name="addUserBySearch"/>
+          <include name="openBrowser"/>
+          <include name="createEmptyUserGroup"/>
+          <include name="deleteUserGroup"/>
+        </methods>
+      </class> <!-- com.suite.regression.UserGroup -->
+      <class name="com.suite.regression.Users">
+        <methods>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.suite.regression.Users -->
+    </classes>
+  </test> <!-- Usergroup(failed) -->
+</suite> <!-- Failed suite [regression] -->

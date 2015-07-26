@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SmokeSuite]">
+  <test name="UserGroup1(failed)">
+    <classes>
+      <class name="com.suite.regression.UserGroup">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="login"/>
+          <include name="logout"/>
+          <include name="openBrowser"/>
+          <include name="deleteUserGroup"/>
+        </methods>
+      </class> <!-- com.suite.regression.UserGroup -->
+    </classes>
+  </test> <!-- UserGroup1(failed) -->
+</suite> <!-- Failed suite [SmokeSuite] -->

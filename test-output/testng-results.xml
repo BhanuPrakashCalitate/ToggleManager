@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="13" failed="0" total="13" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="regression" duration-ms="10863" started-at="2015-07-24T09:11:20Z" finished-at="2015-07-24T09:11:31Z">
+    <groups>
+    </groups>
+    <test name="Users" duration-ms="242" started-at="2015-07-24T09:11:20Z" finished-at="2015-07-24T09:11:20Z">
+      <class name="com.suite.regression.Users">
+        <test-method status="FAIL" signature="login()[pri:0, instance:com.suite.regression.Users@1134affc]" name="login" is-config="true" duration-ms="0" started-at="2015-07-24T14:41:20Z" finished-at="2015-07-24T14:41:20Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.suite.regression.Users.login(Users.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+	at org.testng.TestRunner.run(TestRunner.java:609)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="createUser()[pri:0, instance:com.suite.regression.Users@1134affc]" name="createUser" duration-ms="22" started-at="2015-07-24T14:41:20Z" finished-at="2015-07-24T14:41:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUser -->
+        <test-method status="SKIP" signature="cancelCreatingUser()[pri:0, instance:com.suite.regression.Users@1134affc]" name="cancelCreatingUser" duration-ms="6" started-at="2015-07-24T14:41:20Z" finished-at="2015-07-24T14:41:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cancelCreatingUser -->
+        <test-method status="SKIP" signature="validateFormFields()[pri:0, instance:com.suite.regression.Users@1134affc]" name="validateFormFields" duration-ms="22" started-at="2015-07-24T14:41:20Z" finished-at="2015-07-24T14:41:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateFormFields -->
+        <test-method status="SKIP" signature="deleteUser()[pri:0, instance:com.suite.regression.Users@1134affc]" name="deleteUser" duration-ms="6" started-at="2015-07-24T14:41:20Z" finished-at="2015-07-24T14:41:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUser -->
+        <test-method status="SKIP" signature="deleteAllUsers()[pri:0, instance:com.suite.regression.Users@1134affc]" name="deleteAllUsers" duration-ms="6" started-at="2015-07-24T14:41:20Z" finished-at="2015-07-24T14:41:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAllUsers -->
+        <test-method status="SKIP" signature="logout()[pri:0, instance:com.suite.regression.Users@1134affc]" name="logout" is-config="true" duration-ms="0" started-at="2015-07-24T14:41:20Z" finished-at="2015-07-24T14:41:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.suite.regression.Users -->
+    </test> <!-- Users -->
+    <test name="Usergroup" duration-ms="10384" started-at="2015-07-24T09:11:21Z" finished-at="2015-07-24T09:11:31Z">
+      <class name="com.suite.regression.UserGroup">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.suite.regression.UserGroup@506e6d5e]" name="openBrowser" is-config="true" duration-ms="75820" started-at="2015-07-24T14:40:04Z" finished-at="2015-07-24T14:41:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="FAIL" signature="login()[pri:0, instance:com.suite.regression.UserGroup@506e6d5e]" name="login" is-config="true" duration-ms="0" started-at="2015-07-24T14:41:21Z" finished-at="2015-07-24T14:41:21Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.suite.regression.UserGroup.login(UserGroup.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+	at org.testng.TestRunner.run(TestRunner.java:609)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="createEmptyUserGroup()[pri:0, instance:com.suite.regression.UserGroup@506e6d5e]" name="createEmptyUserGroup" duration-ms="10" started-at="2015-07-24T14:41:31Z" finished-at="2015-07-24T14:41:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createEmptyUserGroup -->
+        <test-method status="SKIP" signature="addDefaultUser()[pri:0, instance:com.suite.regression.UserGroup@506e6d5e]" name="addDefaultUser" duration-ms="3" started-at="2015-07-24T14:41:31Z" finished-at="2015-07-24T14:41:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addDefaultUser -->
+        <test-method status="SKIP" signature="addCustomUser()[pri:0, instance:com.suite.regression.UserGroup@506e6d5e]" name="addCustomUser" duration-ms="2" started-at="2015-07-24T14:41:31Z" finished-at="2015-07-24T14:41:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCustomUser -->
+        <test-method status="SKIP" signature="addUserBySearch()[pri:0, instance:com.suite.regression.UserGroup@506e6d5e]" name="addUserBySearch" duration-ms="4" started-at="2015-07-24T14:41:31Z" finished-at="2015-07-24T14:41:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUserBySearch -->
+        <test-method status="SKIP" signature="validateFormField()[pri:0, instance:com.suite.regression.UserGroup@506e6d5e]" name="validateFormField" duration-ms="2" started-at="2015-07-24T14:41:31Z" finished-at="2015-07-24T14:41:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateFormField -->
+        <test-method status="SKIP" signature="cancelCreatingUserGroup()[pri:0, instance:com.suite.regression.UserGroup@506e6d5e]" name="cancelCreatingUserGroup" duration-ms="3" started-at="2015-07-24T14:41:31Z" finished-at="2015-07-24T14:41:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cancelCreatingUserGroup -->
+        <test-method status="SKIP" signature="deleteUserGroup()[pri:0, instance:com.suite.regression.UserGroup@506e6d5e]" name="deleteUserGroup" duration-ms="3" started-at="2015-07-24T14:41:31Z" finished-at="2015-07-24T14:41:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserGroup -->
+        <test-method status="SKIP" signature="deleteAllUserGroup()[pri:0, instance:com.suite.regression.UserGroup@506e6d5e]" name="deleteAllUserGroup" duration-ms="4" started-at="2015-07-24T14:41:31Z" finished-at="2015-07-24T14:41:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAllUserGroup -->
+        <test-method status="SKIP" signature="logout()[pri:0, instance:com.suite.regression.UserGroup@506e6d5e]" name="logout" is-config="true" duration-ms="0" started-at="2015-07-24T14:41:31Z" finished-at="2015-07-24T14:41:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method status="SKIP" signature="closeBrowser()[pri:0, instance:com.suite.regression.UserGroup@506e6d5e]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2015-07-24T14:41:31Z" finished-at="2015-07-24T14:41:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.suite.regression.UserGroup -->
+    </test> <!-- Usergroup -->
+  </suite> <!-- regression -->
+</testng-results>
