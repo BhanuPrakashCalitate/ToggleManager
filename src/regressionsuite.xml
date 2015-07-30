@@ -11,7 +11,7 @@
   
   <test name="Usergroup">
     <classes>
-       <class name="com.suite.regression.UserGroup" /> 
+       <class name="com.suite.regression.UserGroup" />
     </classes>
   </test>
   
