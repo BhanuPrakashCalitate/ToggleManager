@@ -15,6 +15,7 @@ import com.utils.Utils;
 
 public class UserGroup extends RegressionSuiteBase {
 	WebElement source, destination, userSearchResult;
+	Users users;
 
 	@BeforeTest
 	public void login() throws Exception {

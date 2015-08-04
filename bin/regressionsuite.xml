@@ -3,15 +3,21 @@
 
 <suite name="regression">
 
+  <!-- <test name="Usergroup">
+    <classes>
+       <class name="com.suite.regression.UserGroup" />
+    </classes>
+  </test>
+
   <test name="Users">
     <classes>
        <class name="com.suite.regression.Users" /> 
     </classes>
-  </test>
+  </test> -->
   
-  <test name="Usergroup">
+  <test name="AppContent">
     <classes>
-       <class name="com.suite.regression.UserGroup" />
+       <class name="com.suite.regression.AppContent" /> 
     </classes>
   </test>
   

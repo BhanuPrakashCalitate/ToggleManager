@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [regression]">
-  <test name="Usergroup(failed)">
+  <test name="AppContent(failed)">
     <classes>
-      <class name="com.suite.regression.Users">
+      <class name="com.suite.regression.AppContent">
         <methods>
-          <include name="login"/>
           <include name="logout"/>
-        </methods>
-      </class> <!-- com.suite.regression.Users -->
-      <class name="com.suite.regression.UserGroup">
-        <methods>
-          <include name="addCustomUser"/>
+          <include name="uploadFile"/>
           <include name="login"/>
-          <include name="logout"/>
-          <include name="addUserBySearch"/>
         </methods>
-      </class> <!-- com.suite.regression.UserGroup -->
+      </class> <!-- com.suite.regression.AppContent -->
     </classes>
-  </test> <!-- Usergroup(failed) -->
+  </test> <!-- AppContent(failed) -->
 </suite> <!-- Failed suite [regression] -->

@@ -13,14 +13,16 @@ import com.utils.Utils;
 
 public class RegressionSuiteBase extends SuiteBase {
 	public WebDriver driver;
+	public WebDriverWait visibleElementWait, clickElementWait;
+	public WebElement scheduleAll, queue, upload1, upload2;
 
 	public void waitUntilElementVisible(int seconds, WebElement element) {
-		WebDriverWait visibleElementWait = new WebDriverWait(driver, seconds);
+		visibleElementWait = new WebDriverWait(driver, seconds);
 		visibleElementWait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
-	public void waitElementClickable(int seconds, WebElement element){
-		WebDriverWait clickElementWait = new WebDriverWait(driver, seconds);
+	public void waitUntilElementClickable(int seconds, WebElement element){
+		clickElementWait = new WebDriverWait(driver, seconds);
 		clickElementWait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 
@@ -59,8 +61,12 @@ public class RegressionSuiteBase extends SuiteBase {
 	}
 
 	public void runJobSupervisor() {
-		getElementByXpath("btnQueue").click();
-		getElementByXpath("scheduleAllNow").click();
+		queue = getElementByXpath("btnQueue");
+		waitUntilElementClickable(5, queue);
+		queue.click();
+		scheduleAll = getElementByXpath("btnScheduleAllNow");
+		waitUntilElementClickable(5, scheduleAll);
+		scheduleAll.click();
 		getElementByXpath("runJobSupervisor").click();
 		try {
 			Utils.threadSleep(5000);
