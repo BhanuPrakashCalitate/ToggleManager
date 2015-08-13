@@ -3,7 +3,7 @@
 
 <suite name="regression">
 
-  <!-- <test name="Usergroup">
+  <test name="Usergroup">
     <classes>
        <class name="com.suite.regression.UserGroup" />
     </classes>
@@ -13,7 +13,7 @@
     <classes>
        <class name="com.suite.regression.Users" /> 
     </classes>
-  </test> -->
+  </test>
   
   <test name="AppContent">
     <classes>

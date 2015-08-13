@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +101,27 @@
                     <div class="method-list-content passed suite-regression">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.AppContent" hash-for-method="uploadFile">uploadFile</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.AppContent" hash-for-method="deleteAllFile">deleteAllFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.AppContent" hash-for-method="deleteFile">deleteFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.AppContent" hash-for-method="uploadFile(./src/com/autoitfiles/upload_bmp.exe)">uploadFile(./src/com/autoitfiles/upload_bmp.exe)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.AppContent" hash-for-method="uploadFile(./src/com/autoitfiles/upload_jpeg.exe)">uploadFile(./src/com/autoitfiles/upload_jpeg.exe)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.AppContent" hash-for-method="uploadFile(./src/com/autoitfiles/upload_gif.exe)">uploadFile(./src/com/autoitfiles/upload_gif.exe)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-regression -->
@@ -124,9 +144,40 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="uploadFile">
-                  </a> <!-- uploadFile -->
+                  <a name="deleteAllFile">
+                  </a> <!-- deleteAllFile -->
+                  <span class="method-name">deleteAllFile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteFile">
+                  </a> <!-- deleteFile -->
+                  <span class="method-name">deleteFile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="uploadFile(./src/com/autoitfiles/upload_bmp.exe)">
+                  </a> <!-- uploadFile(./src/com/autoitfiles/upload_bmp.exe) -->
                   <span class="method-name">uploadFile</span>
+                  <span class="parameters">(./src/com/autoitfiles/upload_bmp.exe)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="uploadFile(./src/com/autoitfiles/upload_jpeg.exe)">
+                  </a> <!-- uploadFile(./src/com/autoitfiles/upload_jpeg.exe) -->
+                  <span class="method-name">uploadFile</span>
+                  <span class="parameters">(./src/com/autoitfiles/upload_jpeg.exe)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="uploadFile(./src/com/autoitfiles/upload_gif.exe)">
+                  </a> <!-- uploadFile(./src/com/autoitfiles/upload_gif.exe) -->
+                  <span class="method-name">uploadFile</span>
+                  <span class="parameters">(./src/com/autoitfiles/upload_gif.exe)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -183,16 +234,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'uploadFile')
 data.setCell(0, 2, 'com.suite.regression.AppContent')
-data.setCell(0, 3, 52443);
+data.setCell(0, 3, 88831);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'uploadFile')
+data.setCell(1, 2, 'com.suite.regression.AppContent')
+data.setCell(1, 3, 63163);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'uploadFile')
+data.setCell(2, 2, 'com.suite.regression.AppContent')
+data.setCell(2, 3, 60787);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'deleteAllFile')
+data.setCell(3, 2, 'com.suite.regression.AppContent')
+data.setCell(3, 3, 23528);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'deleteFile')
+data.setCell(4, 2, 'com.suite.regression.AppContent')
+data.setCell(4, 3, 16854);
 window.suiteTableData['regression']= { tableData: data, tableDiv: 'times-div-regression'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 52 seconds</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-regression">
               </div> <!-- times-div-regression -->
             </div> <!-- times-div -->
@@ -224,12 +291,28 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">uploadFile</span>
-                <span class="method-start">32371 ms</span>
+                <span class="method-name">uploadFile(./src/com/autoitfiles/upload_bmp.exe)</span>
+                <span class="method-start">37047 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">uploadFile(./src/com/autoitfiles/upload_gif.exe)</span>
+                <span class="method-start">125883 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">uploadFile(./src/com/autoitfiles/upload_jpeg.exe)</span>
+                <span class="method-start">186677 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteFile</span>
+                <span class="method-start">249846 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteAllFile</span>
+                <span class="method-start">266713 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">logout</span>
-                <span class="method-start">84824 ms</span>
+                <span class="method-start">290253 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
