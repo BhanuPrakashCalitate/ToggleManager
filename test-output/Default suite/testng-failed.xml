@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.suite.smoke.SmokeTestCaseOne">
+      <class name="com.suite.regression.AppContent">
         <methods>
-          <include name="openBrowser"/>
-          <include name="userGroup"/>
+          <include name="deleteAllFile"/>
+          <include name="deleteFile"/>
+          <include name="logout"/>
+          <include name="uploadFile"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- com.suite.smoke.SmokeTestCaseOne -->
+      </class> <!-- com.suite.regression.AppContent -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

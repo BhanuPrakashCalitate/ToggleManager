@@ -7,7 +7,7 @@ import com.utils.ReadWriteExcel;
 
 public class SuiteBase {
 	
-	ReadWriteExcel testSuiteList, smokeSuiteTestCases;
+	public ReadWriteExcel testSuiteList, regressionSuiteTestCases;
 	public static Properties OR;
 	public FileInputStream fin;
 	
@@ -20,7 +20,7 @@ public class SuiteBase {
 	
 	public void init(){
 		testSuiteList = new ReadWriteExcel("C:/bhanu_materials/Selenium/ToggleManager/src/com/excel/TestSuiteList.xlsx");
-		smokeSuiteTestCases = new ReadWriteExcel("C:/bhanu_materials/Selenium/ToggleManager/src/com/excel/SmokeSuiteTestCases.xlsx");
+		regressionSuiteTestCases = new ReadWriteExcel("C:/bhanu_materials/Selenium/ToggleManager/src/com/excel/RegressionSuiteTestCases.xlsx");
 	}
 	
 }

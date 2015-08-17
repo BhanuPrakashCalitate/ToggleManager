@@ -2,61 +2,40 @@
 <testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="regression" duration-ms="296038" started-at="2015-08-13T10:05:09Z" finished-at="2015-08-13T10:10:05Z">
+  <suite name="regression" duration-ms="128302" started-at="2015-08-17T11:55:49Z" finished-at="2015-08-17T11:57:58Z">
     <groups>
     </groups>
-    <test name="AppContent" duration-ms="296038" started-at="2015-08-13T10:05:09Z" finished-at="2015-08-13T10:10:05Z">
-      <class name="com.suite.regression.AppContent">
-        <test-method status="PASS" signature="login()[pri:0, instance:com.suite.regression.AppContent@2d209079]" name="login" is-config="true" duration-ms="37032" started-at="2015-08-13T15:35:09Z" finished-at="2015-08-13T15:35:46Z">
+    <test name="Users" duration-ms="128302" started-at="2015-08-17T11:55:49Z" finished-at="2015-08-17T11:57:58Z">
+      <class name="com.suite.regression.Users">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.suite.regression.Users@3cb5cdba]" name="login" is-config="true" duration-ms="35917" started-at="2015-08-17T17:25:49Z" finished-at="2015-08-17T17:26:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="uploadFile(java.lang.String)[pri:0, instance:com.suite.regression.AppContent@2d209079]" name="uploadFile" duration-ms="88831" started-at="2015-08-13T15:35:46Z" data-provider="testData" finished-at="2015-08-13T15:37:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[./src/com/autoitfiles/upload_bmp.exe]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="createUser()[pri:0, instance:com.suite.regression.Users@3cb5cdba]" name="createUser" duration-ms="30537" started-at="2015-08-17T17:26:25Z" finished-at="2015-08-17T17:26:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- uploadFile -->
-        <test-method status="PASS" signature="uploadFile(java.lang.String)[pri:0, instance:com.suite.regression.AppContent@2d209079]" name="uploadFile" duration-ms="60787" started-at="2015-08-13T15:37:15Z" data-provider="testData" finished-at="2015-08-13T15:38:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[./src/com/autoitfiles/upload_gif.exe]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- createUser -->
+        <test-method status="PASS" signature="cancelCreatingUser()[pri:0, instance:com.suite.regression.Users@3cb5cdba]" name="cancelCreatingUser" duration-ms="7909" started-at="2015-08-17T17:26:56Z" finished-at="2015-08-17T17:27:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- uploadFile -->
-        <test-method status="PASS" signature="uploadFile(java.lang.String)[pri:0, instance:com.suite.regression.AppContent@2d209079]" name="uploadFile" duration-ms="63163" started-at="2015-08-13T15:38:16Z" data-provider="testData" finished-at="2015-08-13T15:39:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[./src/com/autoitfiles/upload_jpeg.exe]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- cancelCreatingUser -->
+        <test-method status="PASS" signature="validateFormFields()[pri:0, instance:com.suite.regression.Users@3cb5cdba]" name="validateFormFields" duration-ms="5035" started-at="2015-08-17T17:27:04Z" finished-at="2015-08-17T17:27:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- uploadFile -->
-        <test-method status="PASS" signature="deleteFile()[pri:0, instance:com.suite.regression.AppContent@2d209079]" name="deleteFile" duration-ms="16854" started-at="2015-08-13T15:39:19Z" finished-at="2015-08-13T15:39:36Z">
+        </test-method> <!-- validateFormFields -->
+        <test-method status="PASS" signature="deleteUser()[pri:0, instance:com.suite.regression.Users@3cb5cdba]" name="deleteUser" duration-ms="20775" started-at="2015-08-17T17:27:09Z" finished-at="2015-08-17T17:27:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteFile -->
-        <test-method status="PASS" signature="deleteAllFile()[pri:0, instance:com.suite.regression.AppContent@2d209079]" name="deleteAllFile" duration-ms="23528" started-at="2015-08-13T15:39:36Z" finished-at="2015-08-13T15:39:59Z">
+        </test-method> <!-- deleteUser -->
+        <test-method status="PASS" signature="deleteAllUsers()[pri:0, instance:com.suite.regression.Users@3cb5cdba]" name="deleteAllUsers" duration-ms="22253" started-at="2015-08-17T17:27:30Z" finished-at="2015-08-17T17:27:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteAllFile -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:com.suite.regression.AppContent@2d209079]" name="logout" is-config="true" duration-ms="5769" started-at="2015-08-13T15:39:59Z" finished-at="2015-08-13T15:40:05Z">
+        </test-method> <!-- deleteAllUsers -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.suite.regression.Users@3cb5cdba]" name="logout" is-config="true" duration-ms="5835" started-at="2015-08-17T17:27:52Z" finished-at="2015-08-17T17:27:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-      </class> <!-- com.suite.regression.AppContent -->
-    </test> <!-- AppContent -->
+      </class> <!-- com.suite.regression.Users -->
+    </test> <!-- Users -->
   </suite> <!-- regression -->
 </testng-results>

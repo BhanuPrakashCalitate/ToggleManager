@@ -7,7 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.adam.base.SuiteBase;
 import com.utils.Utils;
 
@@ -65,7 +67,7 @@ public class RegressionSuiteBase extends SuiteBase {
 		waitUntilElementClickable(5, queue);
 		queue.click();
 		scheduleAll = getElementByXpath("btnScheduleAllNow");
-		waitUntilElementClickable(5, scheduleAll);
+		waitUntilElementClickable(10, scheduleAll);
 		scheduleAll.click();
 		getElementByXpath("runJobSupervisor").click();
 		try {
@@ -73,6 +75,11 @@ public class RegressionSuiteBase extends SuiteBase {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void dropDownList(WebElement element, String value){
+		Select dropDown = new Select(element);
+		dropDown.selectByVisibleText(value);
 	}
 
 }

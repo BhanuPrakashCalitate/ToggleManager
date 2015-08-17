@@ -4,7 +4,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -49,8 +48,7 @@ public class Users extends RegressionSuiteBase {
 		getElementByXpath("textLastName").sendKeys("user" + Utils.randGen());
 		getElementByXpath("textEmail").sendKeys(
 				"testemail" + Utils.randGen() + "@openpeak.com");
-		Select dropDown = new Select(getElementById("dropDownSelect"));
-		dropDown.selectByVisibleText("India");
+		dropDownList(getElementById("dropDownSelect"), "India");
 		getElementByXpath("btnScheduleNow").click();
 	}
 
@@ -63,8 +61,7 @@ public class Users extends RegressionSuiteBase {
 		getElementByXpath("textLastName").sendKeys("user" + Utils.randGen());
 		getElementByXpath("textEmail").sendKeys(
 				"testemail" + Utils.randGen() + "@openpeak.com");
-		Select dropDown = new Select(getElementById("dropDownSelect"));
-		dropDown.selectByVisibleText("India");
+		dropDownList(getElementById("dropDownSelect"), "India");
 		getElementByXpath("btnCancel").click();
 
 	}

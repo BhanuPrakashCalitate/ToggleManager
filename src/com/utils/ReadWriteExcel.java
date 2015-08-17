@@ -167,7 +167,7 @@ public class ReadWriteExcel {
 	}
 	
 	//to retrieve test data
-	public Object[][] retrieveTestData(String sheetName){
+	public String[][] retrieveTestData(String sheetName){
 		int sheetIndex = wb.getSheetIndex(sheetName);
 		
 		if(sheetIndex == -1){
@@ -176,7 +176,7 @@ public class ReadWriteExcel {
 			int rowNum = retrieveRowCount(sheetName);
 			int colNum = retrieveColCount(sheetName);
 			
-			Object data[][] = new Object[rowNum-1][colNum-2];
+			String[][] data = new String[rowNum-1][colNum-2];
 			
 			for(int i = 0; i < rowNum-1; i++){
 				Row row = ws.getRow(i+1);

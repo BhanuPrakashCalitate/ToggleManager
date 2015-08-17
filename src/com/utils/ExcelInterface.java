@@ -16,7 +16,7 @@ public class ExcelInterface {
 		return xlsx.retrieveTestDataFlag(sheetName, colName);
 	}
 	
-	public static Object[][] getTestData(ReadWriteExcel xlsx, String sheetName){
+	public static String[][] getTestData(ReadWriteExcel xlsx, String sheetName){
 		return xlsx.retrieveTestData(sheetName);
 	}
 	
