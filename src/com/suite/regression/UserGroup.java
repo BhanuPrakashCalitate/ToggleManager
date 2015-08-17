@@ -1,40 +1,14 @@
 package com.suite.regression;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.utils.Constants;
 import com.utils.Utils;
 
 public class UserGroup extends RegressionSuiteBase {
 	WebElement source, destination, userSearchResult;
-	Users users;
-
-	@BeforeTest
-	public void login() throws Exception {
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get(Constants.URL);
-		readOR(Constants.PATHOBJECTREPO);
-		getElementByXpath("textUserName").sendKeys(Constants.USERNAME);
-		getElementByXpath("textPassWord").sendKeys(Constants.PASSWORD,
-				Keys.ENTER);
-	}
-
-	@AfterTest
-	public void logout() {
-		getElementByXpath("btnAdministrator").click();
-		getElementByXpath("btnLogout").click();
-		driver.quit();
-	}
 
 	@Test(priority = 1)
 	public void createEmptyUserGroup() {

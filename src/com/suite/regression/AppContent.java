@@ -1,38 +1,11 @@
 package com.suite.regression;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterTest;
-
-import com.utils.Constants;
 import com.utils.Utils;
 
 public class AppContent extends RegressionSuiteBase {
-	
-	@BeforeTest
-	public void login() throws Exception {
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get(Constants.URL);
-		readOR(Constants.PATHOBJECTREPO);
-		getElementByXpath("textUserName").sendKeys(Constants.USERNAME);
-		getElementByXpath("textPassWord").sendKeys(Constants.PASSWORD,
-				Keys.ENTER);
-	}
-
-	@AfterTest
-	public void logout() {
-		getElementByXpath("btnAdministrator").click();
-		getElementByXpath("btnLogout").click();
-		driver.quit();
-	}
 	
 	@DataProvider
 	public String[][] testData(){

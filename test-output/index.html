@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-regression">
-              <span class="suite-name border-passed">regression</span>
+              <span class="suite-name border-failed">regression</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -53,7 +53,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-regression">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">18 methods, 2 failed,   16 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-regression" class="hide-methods failed suite-regression"> (hide)</a> <!-- hide-methods failed suite-regression -->
+                      <a href="#" panel-name="suite-regression" class="show-methods failed suite-regression"> (show)</a> <!-- show-methods failed suite-regression -->
+                    </span>
+                    <div class="method-list-content failed suite-regression">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.UserGroup" hash-for-method="addCustomUser">addCustomUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.UserGroup" hash-for-method="addUserBySearch">addUserBySearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-regression -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +120,22 @@
                     <div class="method-list-content passed suite-regression">
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.UserGroup" hash-for-method="addDefaultUser">addDefaultUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.Users" hash-for-method="cancelCreatingUser">cancelCreatingUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.UserGroup" hash-for-method="cancelCreatingUserGroup">cancelCreatingUserGroup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.UserGroup" hash-for-method="createEmptyUserGroup">createEmptyUserGroup</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -111,12 +145,52 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.AppContent" hash-for-method="deleteAllFile">deleteAllFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.UserGroup" hash-for-method="deleteAllUserGroup">deleteAllUserGroup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.Users" hash-for-method="deleteAllUsers">deleteAllUsers</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.AppContent" hash-for-method="deleteFile">deleteFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.Users" hash-for-method="deleteUser">deleteUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.UserGroup" hash-for-method="deleteUserGroup">deleteUserGroup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.AppContent" hash-for-method="uploadFile(./src/com/autoitfiles/upload_jpeg.exe)">uploadFile(./src/com/autoitfiles/upload_jpeg.exe)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.AppContent" hash-for-method="uploadFile(./src/com/autoitfiles/upload_gif.exe)">uploadFile(./src/com/autoitfiles/upload_gif.exe)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.AppContent" hash-for-method="uploadFile(./src/com/autoitfiles/upload_bmp.exe)">uploadFile(./src/com/autoitfiles/upload_bmp.exe)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.suite.regression.UserGroup" hash-for-method="validateFormField">validateFormField</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -136,6 +210,134 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-regression" class="panel regression">
+          <div class="suite-regression-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.suite.regression.UserGroup</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addCustomUser">
+                  </a> <!-- addCustomUser -->
+                  <span class="method-name">addCustomUser</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.suite.regression.RegressionSuiteBase.dragAndDrop(RegressionSuiteBase.java:41)
+	at com.suite.regression.UserGroup.addCustomUser(UserGroup.java:65)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addUserBySearch">
+                  </a> <!-- addUserBySearch -->
+                  <span class="method-name">addUserBySearch</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.suite.regression.RegressionSuiteBase.dragAndDrop(RegressionSuiteBase.java:41)
+	at com.suite.regression.UserGroup.addUserBySearch(UserGroup.java:80)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-regression-class-failed -->
+          <div class="suite-regression-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.suite.regression.UserGroup</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addDefaultUser">
+                  </a> <!-- addDefaultUser -->
+                  <span class="method-name">addDefaultUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="cancelCreatingUserGroup">
+                  </a> <!-- cancelCreatingUserGroup -->
+                  <span class="method-name">cancelCreatingUserGroup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createEmptyUserGroup">
+                  </a> <!-- createEmptyUserGroup -->
+                  <span class="method-name">createEmptyUserGroup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteAllUserGroup">
+                  </a> <!-- deleteAllUserGroup -->
+                  <span class="method-name">deleteAllUserGroup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteUserGroup">
+                  </a> <!-- deleteUserGroup -->
+                  <span class="method-name">deleteUserGroup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateFormField">
+                  </a> <!-- validateFormField -->
+                  <span class="method-name">validateFormField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-regression-class-passed -->
+          <div class="suite-regression-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.suite.regression.AppContent</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteAllFile">
+                  </a> <!-- deleteAllFile -->
+                  <span class="method-name">deleteAllFile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteFile">
+                  </a> <!-- deleteFile -->
+                  <span class="method-name">deleteFile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="uploadFile(./src/com/autoitfiles/upload_jpeg.exe)">
+                  </a> <!-- uploadFile(./src/com/autoitfiles/upload_jpeg.exe) -->
+                  <span class="method-name">uploadFile</span>
+                  <span class="parameters">(./src/com/autoitfiles/upload_jpeg.exe)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="uploadFile(./src/com/autoitfiles/upload_gif.exe)">
+                  </a> <!-- uploadFile(./src/com/autoitfiles/upload_gif.exe) -->
+                  <span class="method-name">uploadFile</span>
+                  <span class="parameters">(./src/com/autoitfiles/upload_gif.exe)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="uploadFile(./src/com/autoitfiles/upload_bmp.exe)">
+                  </a> <!-- uploadFile(./src/com/autoitfiles/upload_bmp.exe) -->
+                  <span class="method-name">uploadFile</span>
+                  <span class="parameters">(./src/com/autoitfiles/upload_bmp.exe)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-regression-class-passed -->
           <div class="suite-regression-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -189,11 +391,21 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;regression&quot;&gt;
+  &lt;test name=&quot;Usergroup&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.suite.regression.UserGroup&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Usergroup --&gt;
   &lt;test name=&quot;Users&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.suite.regression.Users&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Users --&gt;
+  &lt;test name=&quot;AppContent&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.suite.regression.AppContent&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- AppContent --&gt;
 &lt;/suite&gt; &lt;!-- regression --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -205,7 +417,13 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
+                <span class="test-name">Usergroup (1 class)</span>
+              </li>
+              <li>
                 <span class="test-name">Users (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">AppContent (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -231,32 +449,84 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(18);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createUser')
-data.setCell(0, 2, 'com.suite.regression.Users')
-data.setCell(0, 3, 30537);
+data.setCell(0, 1, 'uploadFile')
+data.setCell(0, 2, 'com.suite.regression.AppContent')
+data.setCell(0, 3, 64856);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'deleteAllUsers')
-data.setCell(1, 2, 'com.suite.regression.Users')
-data.setCell(1, 3, 22253);
+data.setCell(1, 1, 'uploadFile')
+data.setCell(1, 2, 'com.suite.regression.AppContent')
+data.setCell(1, 3, 44285);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'deleteUser')
-data.setCell(2, 2, 'com.suite.regression.Users')
-data.setCell(2, 3, 20775);
+data.setCell(2, 1, 'uploadFile')
+data.setCell(2, 2, 'com.suite.regression.AppContent')
+data.setCell(2, 3, 43866);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'cancelCreatingUser')
+data.setCell(3, 1, 'createUser')
 data.setCell(3, 2, 'com.suite.regression.Users')
-data.setCell(3, 3, 7909);
+data.setCell(3, 3, 27945);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'validateFormFields')
-data.setCell(4, 2, 'com.suite.regression.Users')
-data.setCell(4, 3, 5035);
+data.setCell(4, 1, 'addUserBySearch')
+data.setCell(4, 2, 'com.suite.regression.UserGroup')
+data.setCell(4, 3, 26159);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'deleteAllUsers')
+data.setCell(5, 2, 'com.suite.regression.Users')
+data.setCell(5, 3, 23208);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'createEmptyUserGroup')
+data.setCell(6, 2, 'com.suite.regression.UserGroup')
+data.setCell(6, 3, 22096);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'deleteAllFile')
+data.setCell(7, 2, 'com.suite.regression.AppContent')
+data.setCell(7, 3, 21629);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'deleteUser')
+data.setCell(8, 2, 'com.suite.regression.Users')
+data.setCell(8, 3, 21033);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'deleteAllUserGroup')
+data.setCell(9, 2, 'com.suite.regression.UserGroup')
+data.setCell(9, 3, 16876);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'deleteFile')
+data.setCell(10, 2, 'com.suite.regression.AppContent')
+data.setCell(10, 3, 16460);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'addCustomUser')
+data.setCell(11, 2, 'com.suite.regression.UserGroup')
+data.setCell(11, 3, 15008);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'deleteUserGroup')
+data.setCell(12, 2, 'com.suite.regression.UserGroup')
+data.setCell(12, 3, 12830);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'addDefaultUser')
+data.setCell(13, 2, 'com.suite.regression.UserGroup')
+data.setCell(13, 3, 8128);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'cancelCreatingUser')
+data.setCell(14, 2, 'com.suite.regression.Users')
+data.setCell(14, 3, 7488);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'cancelCreatingUserGroup')
+data.setCell(15, 2, 'com.suite.regression.UserGroup')
+data.setCell(15, 3, 5603);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'validateFormField')
+data.setCell(16, 2, 'com.suite.regression.UserGroup')
+data.setCell(16, 3, 5393);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'validateFormFields')
+data.setCell(17, 2, 'com.suite.regression.Users')
+data.setCell(17, 3, 5023);
 window.suiteTableData['regression']= { tableData: data, tableDiv: 'times-div-regression'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-regression">
               </div> <!-- times-div-regression -->
             </div> <!-- times-div -->
@@ -282,34 +552,112 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.suite.regression.Users</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.suite.regression.UserGroup</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">login</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">createUser</span>
-                <span class="method-start">35930 ms</span>
+                <span class="method-name">createEmptyUserGroup</span>
+                <span class="method-start">38062 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">cancelCreatingUser</span>
-                <span class="method-start">66469 ms</span>
+                <span class="method-name">addDefaultUser</span>
+                <span class="method-start">60162 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">validateFormFields</span>
-                <span class="method-start">74380 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">addCustomUser</span>
+                <span class="method-start">68291 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">deleteUser</span>
-                <span class="method-start">79416 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">addUserBySearch</span>
+                <span class="method-start">83303 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">deleteAllUsers</span>
-                <span class="method-start">100198 ms</span>
+                <span class="method-name">validateFormField</span>
+                <span class="method-start">109475 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">cancelCreatingUserGroup</span>
+                <span class="method-start">114869 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteUserGroup</span>
+                <span class="method-start">120473 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteAllUserGroup</span>
+                <span class="method-start">133304 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">logout</span>
-                <span class="method-start">122457 ms</span>
+                <span class="method-start">150192 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.suite.regression.Users</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">login</span>
+                <span class="method-start">156132 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">createUser</span>
+                <span class="method-start">196201 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">cancelCreatingUser</span>
+                <span class="method-start">224147 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateFormFields</span>
+                <span class="method-start">231636 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteUser</span>
+                <span class="method-start">236661 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteAllUsers</span>
+                <span class="method-start">257696 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">logout</span>
+                <span class="method-start">280905 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.suite.regression.AppContent</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">login</span>
+                <span class="method-start">289466 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">uploadFile(./src/com/autoitfiles/upload_bmp.exe)</span>
+                <span class="method-start">321035 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">uploadFile(./src/com/autoitfiles/upload_gif.exe)</span>
+                <span class="method-start">385895 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">uploadFile(./src/com/autoitfiles/upload_jpeg.exe)</span>
+                <span class="method-start">430189 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteFile</span>
+                <span class="method-start">474057 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteAllFile</span>
+                <span class="method-start">490518 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">logout</span>
+                <span class="method-start">512185 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

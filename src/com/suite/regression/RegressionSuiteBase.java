@@ -1,16 +1,23 @@
 package com.suite.regression;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 import com.adam.base.SuiteBase;
+import com.utils.Constants;
 import com.utils.Utils;
 
 public class RegressionSuiteBase extends SuiteBase {
@@ -77,9 +84,28 @@ public class RegressionSuiteBase extends SuiteBase {
 		}
 	}
 	
-	public void dropDownList(WebElement element, String value){
-		Select dropDown = new Select(element);
+	public void dropDownList(WebElement selectElement, String value){
+		Select dropDown = new Select(selectElement);
 		dropDown.selectByVisibleText(value);
+	}
+	
+	@BeforeTest
+	public void login() throws Exception {
+		driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get(Constants.URL);
+		readOR(Constants.PATHOBJECTREPO);
+		getElementByXpath("textUserName").sendKeys(Constants.USERNAME);
+		getElementByXpath("textPassWord").sendKeys(Constants.PASSWORD,
+				Keys.ENTER);
+	}
+
+	@AfterTest
+	public void logout() {
+		getElementByXpath("btnAdministrator").click();
+		getElementByXpath("btnLogout").click();
+		driver.quit();
 	}
 
 }
