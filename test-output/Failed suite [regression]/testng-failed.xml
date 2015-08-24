@@ -6,19 +6,14 @@
       <class name="com.suite.regression.Users">
         <methods>
           <include name="login"/>
+          <include name="logout"/>
         </methods>
       </class> <!-- com.suite.regression.Users -->
       <class name="com.suite.regression.AppContent">
         <methods>
-          <include name="uploadFile"/>
-          <include name="login"/>
+          <include name="uploadFile" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.suite.regression.AppContent -->
-      <class name="com.suite.regression.UserGroup">
-        <methods>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.suite.regression.UserGroup -->
     </classes>
   </test> <!-- AppContent(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [regression]] -->

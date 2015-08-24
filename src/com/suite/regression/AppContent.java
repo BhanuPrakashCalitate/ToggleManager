@@ -1,19 +1,25 @@
 package com.suite.regression;
 
+/*
+ * Author Bhanu
+ */
+
 import java.io.IOException;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.utils.Constants;
+import com.utils.ReadWriteExcel;
 import com.utils.Utils;
 
 public class AppContent extends RegressionSuiteBase {
 	
 	@DataProvider
-	public String[][] testData(){
-		return new String[][] {
-				{"./src/com/autoitfiles/upload_bmp.exe"},
-				{"./src/com/autoitfiles/upload_gif.exe"},
-				{"./src/com/autoitfiles/upload_jpeg.exe"}
-		};
+	public String[][] testData() throws IOException{
+		ReadWriteExcel.openExcel(Constants.EXCELPATH, "AppContent");
+		String[][] input = ReadWriteExcel.readInput();
+		return input;
 	}
 	
 	@Test(priority=1, dataProvider="testData")
