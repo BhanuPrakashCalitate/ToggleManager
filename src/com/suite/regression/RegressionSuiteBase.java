@@ -4,12 +4,17 @@ package com.suite.regression;
  * Author Bhanu
  */
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,6 +22,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -93,6 +100,20 @@ public class RegressionSuiteBase extends SuiteBase {
 		dropDown.selectByVisibleText(value);
 	}
 	
+	@AfterMethod
+	public void takeScreenShot(ITestResult result) {
+		if(result.getStatus() == ITestResult.FAILURE){
+			System.out.println(result.getStatus());
+			String fileName = result.getName().toString().trim();
+			File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			try {
+				FileUtils.copyFile(srcFile, new File(Constants.FILEPATH + fileName + ".jpg"));
+			} catch (IOException e) {
+				System.out.println("Specified directory not found");
+			}
+		}
+	}
+	
 	@BeforeTest
 	public void login() throws Exception {
 		driver = new FirefoxDriver();
@@ -100,8 +121,8 @@ public class RegressionSuiteBase extends SuiteBase {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(Constants.URL);
 		readOR(Constants.PATHOBJECTREPO);
-		getElementByXpath("textUserName").sendKeys(Constants.USERNAME);
-		getElementByXpath("textPassWord").sendKeys(Constants.PASSWORD,
+		getElementById("textUserName").sendKeys(Constants.USERNAME);
+		getElementById("textPassWord").sendKeys(Constants.PASSWORD,
 				Keys.ENTER);
 	}
 

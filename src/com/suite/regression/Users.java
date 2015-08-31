@@ -4,9 +4,14 @@ package com.suite.regression;
  * Author Bhanu
  */
 
+import java.io.IOException;
+
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.utils.Constants;
+import com.utils.ReadWriteExcel;
 import com.utils.Utils;
 
 public class Users extends RegressionSuiteBase {
@@ -16,22 +21,29 @@ public class Users extends RegressionSuiteBase {
 		getElementByXpath("btnAddDropDown").click();
 		getElementByXpath("btnAddUser").click();
 	}
+	
+	@DataProvider
+	public String[][] testData() throws IOException{
+		ReadWriteExcel.openExcel(Constants.EXCELPATH, "Users");
+		String[][] input = ReadWriteExcel.readInput();
+		return input;
+	}
 
-	@Test(priority = 1)
-	public void createUser() {
+	@Test(priority = 1, dataProvider = "testData")
+	public void createUser(String testEmail, String testPhone, String country) {
 		userFormPage();
 		getElementByXpath("textUsersName").sendKeys(
 				"testuser" + Utils.randGen());
 		getElementByXpath("textFirstName").sendKeys("test" + Utils.randGen());
 		getElementByXpath("textLastName").sendKeys("user" + Utils.randGen());
-		getElementByXpath("textEmail").sendKeys(
-				"testemail" + Utils.randGen() + "@openpeak.com");
-		dropDownList(getElementById("dropDownSelect"), "India");
+		getElementByXpath("textPhone").sendKeys(testPhone);
+		getElementByXpath("textEmail").sendKeys(testEmail);
+		dropDownList(getElementById("dropDownSelect"), country);
 		getElementByXpath("btnScheduleNow").click();
 	}
 
 	@Test(priority = 2)
-	public void cancelCreatingUser() {
+	public void cancelCreatingUser() throws IOException {
 		userFormPage();
 		getElementByXpath("textUsersName").sendKeys(
 				"testuser" + Utils.randGen());
@@ -41,7 +53,6 @@ public class Users extends RegressionSuiteBase {
 				"testemail" + Utils.randGen() + "@openpeak.com");
 		dropDownList(getElementById("dropDownSelect"), "India");
 		getElementByXpath("btnCancel").click();
-
 	}
 
 	@Test(priority = 3)
@@ -61,7 +72,6 @@ public class Users extends RegressionSuiteBase {
 
 	@Test(priority = 4)
 	public void deleteUser() {
-		createUser();
 		getElementByXpath("checkBoxUser").click();
 		if (getElementByXpath("btnDeleteUser").isEnabled()) {
 			getElementByXpath("btnDeleteUser").click();

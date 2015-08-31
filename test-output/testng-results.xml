@@ -1,24 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="7" total="8" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Failed suite [Failed suite [regression]]" duration-ms="89130" started-at="2015-08-24T16:28:09Z" finished-at="2015-08-24T16:29:38Z">
+  <suite name="regression" duration-ms="140474" started-at="2015-08-31T12:31:42Z" finished-at="2015-08-31T12:34:03Z">
     <groups>
     </groups>
-    <test name="AppContent(failed)(failed)" duration-ms="89130" started-at="2015-08-24T16:28:09Z" finished-at="2015-08-24T16:29:38Z">
-      <class name="com.suite.regression.AppContent">
-        <test-method status="FAIL" signature="uploadFile(java.lang.String)[pri:0, instance:com.suite.regression.AppContent@34ce8af7]" name="uploadFile" duration-ms="11" started-at="2015-08-24T21:58:55Z" data-provider="testData" finished-at="2015-08-24T21:58:55Z">
+    <test name="Users" duration-ms="140474" started-at="2015-08-31T12:31:42Z" finished-at="2015-08-31T12:34:03Z">
+      <class name="com.suite.regression.Users">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.suite.regression.Users@6b71769e]" name="login" is-config="true" duration-ms="36512" started-at="2015-08-31T18:01:42Z" finished-at="2015-08-31T18:02:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="FAIL" signature="createUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suite.regression.Users@6b71769e]" name="createUser" duration-ms="18646" started-at="2015-08-31T18:02:22Z" data-provider="testData" finished-at="2015-08-31T18:02:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[./src/com/autoitfiles/upload_bmp.exe]]>
+                <![CDATA[testemail1@openpeak.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[9156382934]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[India]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at com.suite.regression.AppContent.uploadFile(AppContent.java:23)
+	at com.suite.regression.Users.createUser(Users.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -48,18 +62,373 @@
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- uploadFile -->
-      </class> <!-- com.suite.regression.AppContent -->
-      <class name="com.suite.regression.Users">
-        <test-method status="PASS" signature="login()[pri:0, instance:com.suite.regression.Users@2d209079]" name="login" is-config="true" duration-ms="44405" started-at="2015-08-24T21:58:09Z" finished-at="2015-08-24T21:58:53Z">
+        </test-method> <!-- createUser -->
+        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:com.suite.regression.Users@6b71769e]" name="takeScreenShot" is-config="true" duration-ms="809" started-at="2015-08-31T18:02:41Z" finished-at="2015-08-31T18:02:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createUser status=FAILURE method=Users.createUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suite.regression.Users@6b71769e] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:com.suite.regression.Users@2d209079]" name="logout" is-config="true" duration-ms="42686" started-at="2015-08-24T21:58:55Z" finished-at="2015-08-24T21:59:38Z">
+        </test-method> <!-- takeScreenShot -->
+        <test-method status="FAIL" signature="createUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suite.regression.Users@6b71769e]" name="createUser" duration-ms="7006" started-at="2015-08-31T18:02:42Z" data-provider="testData" finished-at="2015-08-31T18:02:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testemail2@openpeak.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1552734567]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[United States]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.suite.regression.Users.createUser(Users.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUser -->
+        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:com.suite.regression.Users@6b71769e]" name="takeScreenShot" is-config="true" duration-ms="486" started-at="2015-08-31T18:02:49Z" finished-at="2015-08-31T18:02:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createUser status=FAILURE method=Users.createUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suite.regression.Users@6b71769e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method status="FAIL" signature="createUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suite.regression.Users@6b71769e]" name="createUser" duration-ms="6734" started-at="2015-08-31T18:02:49Z" data-provider="testData" finished-at="2015-08-31T18:02:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testemail3@openpeak.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4456378293]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[United Kingdom]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.suite.regression.Users.createUser(Users.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUser -->
+        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:com.suite.regression.Users@6b71769e]" name="takeScreenShot" is-config="true" duration-ms="312" started-at="2015-08-31T18:02:56Z" finished-at="2015-08-31T18:02:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createUser status=FAILURE method=Users.createUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suite.regression.Users@6b71769e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method status="FAIL" signature="createUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suite.regression.Users@6b71769e]" name="createUser" duration-ms="6904" started-at="2015-08-31T18:02:56Z" data-provider="testData" finished-at="2015-08-31T18:03:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testemail4@openpeak.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3245371828]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Belgium]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.suite.regression.Users.createUser(Users.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUser -->
+        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:com.suite.regression.Users@6b71769e]" name="takeScreenShot" is-config="true" duration-ms="458" started-at="2015-08-31T18:03:03Z" finished-at="2015-08-31T18:03:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createUser status=FAILURE method=Users.createUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suite.regression.Users@6b71769e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method status="FAIL" signature="cancelCreatingUser()[pri:0, instance:com.suite.regression.Users@6b71769e]" name="cancelCreatingUser" duration-ms="6815" started-at="2015-08-31T18:03:04Z" finished-at="2015-08-31T18:03:11Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.suite.regression.Users.cancelCreatingUser(Users.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cancelCreatingUser -->
+        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:com.suite.regression.Users@6b71769e]" name="takeScreenShot" is-config="true" duration-ms="283" started-at="2015-08-31T18:03:11Z" finished-at="2015-08-31T18:03:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=cancelCreatingUser status=FAILURE method=Users.cancelCreatingUser()[pri:0, instance:com.suite.regression.Users@6b71769e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method status="FAIL" signature="validateFormFields()[pri:0, instance:com.suite.regression.Users@6b71769e]" name="validateFormFields" duration-ms="7581" started-at="2015-08-31T18:03:11Z" finished-at="2015-08-31T18:03:18Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [This field is requireds.] but found [This field is required.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [This field is requireds.] but found [This field is required.]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.suite.regression.Users.validateFormFields(Users.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateFormFields -->
+        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:com.suite.regression.Users@6b71769e]" name="takeScreenShot" is-config="true" duration-ms="457" started-at="2015-08-31T18:03:18Z" finished-at="2015-08-31T18:03:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateFormFields status=FAILURE method=Users.validateFormFields()[pri:0, instance:com.suite.regression.Users@6b71769e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method status="FAIL" signature="deleteUser()[pri:0, instance:com.suite.regression.Users@6b71769e]" name="deleteUser" duration-ms="10204" started-at="2015-08-31T18:03:19Z" finished-at="2015-08-31T18:03:29Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.suite.regression.Users.deleteUser(Users.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUser -->
+        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:com.suite.regression.Users@6b71769e]" name="takeScreenShot" is-config="true" duration-ms="994" started-at="2015-08-31T18:03:29Z" finished-at="2015-08-31T18:03:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteUser status=FAILURE method=Users.deleteUser()[pri:0, instance:com.suite.regression.Users@6b71769e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method status="PASS" signature="deleteAllUsers()[pri:0, instance:com.suite.regression.Users@6b71769e]" name="deleteAllUsers" duration-ms="25222" started-at="2015-08-31T18:03:30Z" finished-at="2015-08-31T18:03:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAllUsers -->
+        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:com.suite.regression.Users@6b71769e]" name="takeScreenShot" is-config="true" duration-ms="0" started-at="2015-08-31T18:03:55Z" finished-at="2015-08-31T18:03:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteAllUsers status=SUCCESS method=Users.deleteAllUsers()[pri:0, instance:com.suite.regression.Users@6b71769e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.suite.regression.Users@6b71769e]" name="logout" is-config="true" duration-ms="7432" started-at="2015-08-31T18:03:55Z" finished-at="2015-08-31T18:04:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
       </class> <!-- com.suite.regression.Users -->
-    </test> <!-- AppContent(failed)(failed) -->
-  </suite> <!-- Failed suite [Failed suite [regression]] -->
+    </test> <!-- Users -->
+  </suite> <!-- regression -->
 </testng-results>
